@@ -1,17 +1,17 @@
-package com.yuren.codecrush.Q0;
+package com.yuren.codecrushlearn.Q0;
 
 /**
  * Created with Intellij IDEA.
- * Description:
+ * Description: 1503 注解版
  *
- * @author 10204
+ * @author Sleepy Code Tom
  * @date 2024-11-21 23:38
  */
 public class Q1503 {
     private static String constructPalindrome(String s, int k) {
-        System.out.println("s.length = " + s.length());
+//        System.out.println("s.length = " + s.length());
         int diff = s.length() - k;
-        System.out.println("diff = " + diff);
+//        System.out.println("diff = " + diff);
         if (diff == 0) {
             return new StringBuilder(s).reverse().toString();
         }
@@ -40,6 +40,7 @@ public class Q1503 {
     }
 
     public static void main(String[] args) {
+        // 官方样例不好理解，这4个会典型些
         System.out.println(constructPalindrome("abccc", 2));
         System.out.println(constructPalindrome("abccc", 3));
         System.out.println(constructPalindrome("cccba", 2));

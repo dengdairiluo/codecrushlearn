@@ -1,4 +1,4 @@
-package com.yuren.codecrush.Q0;
+package com.yuren.codecrushlearn.Q0;
 
 /**
  * Created with Intellij IDEA.

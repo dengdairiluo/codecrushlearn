@@ -1,4 +1,4 @@
-package com.yuren.codecrush.Q0;
+package com.yuren.codecrushlearn.Q0;
 
 import java.util.LinkedList;
 import java.util.Queue;
