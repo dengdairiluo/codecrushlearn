@@ -16,6 +16,7 @@ public class Q1507 {
             if ((n & 1) == 1) {// 使用按位 与 操作符 & 来检查 n 的二进制最低位是否为 1。若为 1，则将 base 的当前值加到 res 上。
                 res += base;
             }
+            System.out.println("base=" + base + " n=" + n + " k=" + k + " res=" + res);
             base *= k;  // 更新基数为k的幂次 k^0, k^1, k^2,依次类推
             n >>= 1;    // 右移一位处理下一位
         }
@@ -23,8 +24,8 @@ public class Q1507 {
     }
 
     public static void main(String[] args) {
-        System.out.println(findNthTerm(3, 0));
-        System.out.println(findNthTerm(3, 1));
-        System.out.println(findNthTerm(3, 2));
+//        System.out.println(findNthTerm(3, 0));
+//        System.out.println(findNthTerm(3, 1));
+        System.out.println(findNthTerm(3, 12));
     }
 }
