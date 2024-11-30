@@ -12,15 +12,23 @@ public class Q1508 {
     public int  calculateDistance(String commands) {
         return Math.abs(parseAndExecute(commands));// 使用 int[] index 是为了在递归调用中保持 index 的引用，从而更新其值
     }
+
+    /**
+     * 解析然后处理命令
+     * @param commands
+     * @return
+     */
     private  int parseAndExecute(String commands) {
         int distance = 0;
         while (index < commands.length()) {
             char c = commands.charAt(index);
+            // 当前子命令的最后一个字符，跳出循环
             if (c == ']') {
-                index++; // 当前子命令的最后一个字符，跳出循环
+                index++;
                 break;
             }
-            if (c == ' ') {// 空格，继续解析一下个命令
+            // 空格，继续解析一下个命令
+            if (c == ' ') {
                 index++;
                 continue;
             }
@@ -37,14 +45,34 @@ public class Q1508 {
             }
             int k = Integer.parseInt(number.toString());
             if (commandType.toString().equals("REPEAT")) {
-                index++; // 跳过 '['
-                distance += k * parseAndExecute(commands);// REPEAT, 乘以后面的部分
-            } else if (commandType.toString().equals("BK")) {// 后退
-                distance -= k;
-            } else if (commandType.toString().equals("FD")) {// 前进
-                distance += k;
+                // 跳过 '['
+                index++;
+                // REPEAT, 乘以后面的部分
+                distance += k * parseAndExecute(commands);
+            } else {
+                distance = executeOneCommand(distance, commandType.toString(), k);
             }
         }
         return distance;
+    }
+
+    /**
+     * 执行一次命令
+     * @param beforeDistance 执行前距离
+     * @param commandType 命令类型
+     * @param oneDistance 执行距离
+     * @return 执行后距离
+     */
+    private static int executeOneCommand(int beforeDistance, String commandType, int oneDistance) {
+        int afterDistance = beforeDistance;
+        // 前进
+        if ("BK".equals(commandType)) {
+            afterDistance += oneDistance;
+        // 后退
+        } else if ("FD".equals(commandType)) {
+            afterDistance -= oneDistance;
+        }
+        return afterDistance;
+
     }
 }
