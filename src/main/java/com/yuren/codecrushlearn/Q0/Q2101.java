@@ -20,32 +20,22 @@ public class Q2101 {
             if (isBlank(c)) {
                 if (isNum) {
                     numCount++;
-                    if (numCount > 4) {
+                    if (isNumCheck(numCount, dotCount, num)) {
+                        isNum = false;
+                        num = 0;
+                    } else {
                         return false;
                     }
-                    if (numCount - dotCount > 1) {
-                        return false;
-                    }
-                    if (num > 255) {
-                        return false;
-                    }
-                    isNum = false;
-                    num = 0;
                 }
             } else if (idDot(c)) {
                 if (isNum) {
                     numCount++;
-                    if (numCount > 4) {
+                    if (isNumCheck(numCount, dotCount, num)) {
+                        isNum = false;
+                        num = 0;
+                    } else {
                         return false;
                     }
-                    if (numCount - dotCount > 1) {
-                        return false;
-                    }
-                    if (num > 255) {
-                        return false;
-                    }
-                    isNum = false;
-                    num = 0;
                 }
                 dotCount++;
                 if (dotCount > 3) {
@@ -89,5 +79,18 @@ public class Q2101 {
 
     private boolean idDot(char c) {
         return c == '.';
+    }
+
+    private boolean isNumCheck(int numCount, int dotCount, int num) {
+        if (numCount > 4) {
+            return false;
+        }
+        if (numCount - dotCount > 1) {
+            return false;
+        }
+        if (num > 255) {
+            return false;
+        }
+        return true;
     }
 }
