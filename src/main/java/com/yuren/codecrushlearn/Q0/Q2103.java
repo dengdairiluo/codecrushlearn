@@ -23,6 +23,7 @@ public class Q2103 {
         int maxV = Integer.MAX_VALUE / 10;
         for (; i < n && Character.isDigit(s.charAt(i)); i++) {
             int v = s.charAt(i) - '0';
+            // 溢出的两种形态  10 * ans > Integer.MAX_VALUE 或 最后一位溢出 > 8 或 < -7
             if (ans > maxV || ans == maxV && (!sign && v > 7 || sign && v > 8)) {
                 return 0;
             }
