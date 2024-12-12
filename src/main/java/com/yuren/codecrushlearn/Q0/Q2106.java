@@ -11,14 +11,17 @@ public class Q2106 {
 
     public String formatTime(long timestamp) {
         long currentTime = 1707838655485L;
+        // 时间差值
         long diff = currentTime - timestamp;
 
+        // 算好临界值
         final long ONE_MINUTE_MS = 60000;
         final long ONE_HOUR_MS = 60 * ONE_MINUTE_MS;
         final long ONE_DAY_MS = 24 * ONE_HOUR_MS;
         final long ONE_MONTH_MS = 30 * ONE_DAY_MS;
         final long ONE_YEAR_MS = 365 * ONE_DAY_MS;
 
+        // 分类讨论
         if (diff < ONE_MINUTE_MS) {
             return "刚刚发布";
         } else if (diff < ONE_HOUR_MS) {
