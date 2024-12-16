@@ -27,6 +27,7 @@ public class Q2108 {
         for (int i = 0; i < ints.size(); i++) {
             String smallNumber = smallNumberToWords(ints.get(i));
             if (!smallNumber.isEmpty()) {
+                // 拼个 三位的单位
                 words.insert(0, smallNumber + THOUSANDS[i]);
             }
         }
@@ -37,7 +38,7 @@ public class Q2108 {
     /**
      * 将数字每三位分组
      * @param num
-     * @return
+     * @return 分组后的数组list
      */
     private static List<Integer> getIntGroup(int num) {
         List<Integer> ints = new ArrayList<>();
@@ -50,7 +51,7 @@ public class Q2108 {
     }
 
     /**
-     * 将三位数数字转成words
+     * 将三位数数字转成words，三位内转英文
      * @param num 三位数一下（包含）数字
      * @return
      */
@@ -64,5 +65,9 @@ public class Q2108 {
         } else {
             return LESS_THAN_20[num / 100] + HUNDRED + smallNumberToWords(num % 100);
         }
+    }
+
+    public static void main(String[] args) {
+        System.out.println(formatInteger(12345678));
     }
 }
