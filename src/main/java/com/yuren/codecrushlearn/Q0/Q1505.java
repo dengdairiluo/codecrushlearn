@@ -53,7 +53,7 @@ public class Q1505 {
 
     private char getAppendChar(int p1, char c) {
         // p1=3 时，不论是字母子串还是数字字串，都用与要填充的字母个数相同的星号 * 来填充
-        if(p1 == 3){
+        if (p1 == 3) {
             return '*';
         }
 

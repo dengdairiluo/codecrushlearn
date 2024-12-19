@@ -9,16 +9,39 @@ package com.yuren.codecrushlearn.Q0;
  */
 public class Q1508 {
     int index = 0; // index 代表当前访问的使 字符串的 第 index 个字符
-    public int  calculateDistance(String commands) {
+
+    /**
+     * 执行一次命令
+     *
+     * @param beforeDistance 执行前距离
+     * @param commandType    命令类型
+     * @param oneDistance    执行距离
+     * @return 执行后距离
+     */
+    private static int executeOneCommand(int beforeDistance, String commandType, int oneDistance) {
+        int afterDistance = beforeDistance;
+        // 前进
+        if ("BK".equals(commandType)) {
+            afterDistance += oneDistance;
+            // 后退
+        } else if ("FD".equals(commandType)) {
+            afterDistance -= oneDistance;
+        }
+        return afterDistance;
+
+    }
+
+    public int calculateDistance(String commands) {
         return Math.abs(parseAndExecute(commands));// 使用 int[] index 是为了在递归调用中保持 index 的引用，从而更新其值
     }
 
     /**
      * 解析然后处理命令
+     *
      * @param commands
      * @return
      */
-    private  int parseAndExecute(String commands) {
+    private int parseAndExecute(String commands) {
         int distance = 0;
         while (index < commands.length()) {
             char c = commands.charAt(index);
@@ -54,25 +77,5 @@ public class Q1508 {
             }
         }
         return distance;
-    }
-
-    /**
-     * 执行一次命令
-     * @param beforeDistance 执行前距离
-     * @param commandType 命令类型
-     * @param oneDistance 执行距离
-     * @return 执行后距离
-     */
-    private static int executeOneCommand(int beforeDistance, String commandType, int oneDistance) {
-        int afterDistance = beforeDistance;
-        // 前进
-        if ("BK".equals(commandType)) {
-            afterDistance += oneDistance;
-        // 后退
-        } else if ("FD".equals(commandType)) {
-            afterDistance -= oneDistance;
-        }
-        return afterDistance;
-
     }
 }

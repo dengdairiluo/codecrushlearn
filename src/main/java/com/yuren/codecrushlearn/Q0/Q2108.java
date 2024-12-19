@@ -37,6 +37,7 @@ public class Q2108 {
 
     /**
      * 将数字每三位分组
+     *
      * @param num
      * @return 分组后的数组list
      */
@@ -52,6 +53,7 @@ public class Q2108 {
 
     /**
      * 将三位数数字转成words，三位内转英文
+     *
      * @param num 三位数一下（包含）数字
      * @return
      */

@@ -47,10 +47,10 @@ public class Q2109 {
     }
 
     public static void main(String[] args) {
-        int[][] matrix = new int[][]{{5,  7,  6,  3},
-                                     {2,  4,  8, 12},
-                                     {3,  5, 10,  7},
-                                     {4, 16,  4, 17}};
+        int[][] matrix = new int[][]{{5, 7, 6, 3},
+                {2, 4, 8, 12},
+                {3, 5, 10, 7},
+                {4, 16, 4, 17}};
         System.out.println(clean(matrix, 4, 4));
     }
 }

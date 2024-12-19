@@ -27,7 +27,7 @@ public class Q1506 {
 
         // Calculate k and b for the equation kx + b = 0
         int k = leftResult[0] - rightResult[0]; // k = 左半边的k - 右半边的k
-        int b = leftResult[1] - rightResult[1] ; // b = 左半边的b - 右半边的b
+        int b = leftResult[1] - rightResult[1]; // b = 左半边的b - 右半边的b
 
         // x = - b / k
         double x = -1.0 * b / k;
