@@ -30,4 +30,19 @@ public class Q2110 {
         }
         return res;
     }
+
+    /**
+     * 数学是第一生产力
+     * @param n
+     * @return
+     */
+    private static List<Integer> yanghui2(int n) {
+        List<Integer> res = new ArrayList<>(n);
+        long cur = 1;
+        for (int i = 0; i < n; i++) {
+            res.add((int) cur);
+            cur = cur * (n - i - 1) / (i + 1);
+        }
+        return res;
+    }
 }
