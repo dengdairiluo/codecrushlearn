@@ -14,6 +14,7 @@ public class Q2112 {
         int i = 0, j = 0;
         int count = 0;
         while (i < m && j < n) {
+            // 逐位比较，如果不同。计数。两个单词位数相同比较下一位，否则插入补位
             if (wrongWord.charAt(i) != correctWord.charAt(j)) {
                 count++; // 编辑次数
                 if (m == n) { // 替换
