@@ -23,6 +23,14 @@ public class Q2113 {
         return 'E'; // 如果没有找到胜利者，返回 'E'
     }
 
+    /**
+     * 水平判断
+     * @param board
+     * @param n
+     * @param row
+     * @param col
+     * @return
+     */
     private boolean checkHorizontal(List<String> board, int n, int row, int col) {
         if (col > n - 5)
             return false;
@@ -35,7 +43,14 @@ public class Q2113 {
         }
         return true;
     }
-
+    /**
+     * 垂直判断
+     * @param board
+     * @param n
+     * @param row
+     * @param col
+     * @return
+     */
     private boolean checkVertical(List<String> board, int n, int row, int col) {
         if (row > n - 5)
             return false;
@@ -48,7 +63,14 @@ public class Q2113 {
         }
         return true;
     }
-
+    /**
+     * 右斜判断
+     * @param board
+     * @param n
+     * @param row
+     * @param col
+     * @return
+     */
     private boolean checkDiagonalRight(List<String> board, int n, int row, int col) {
         if (row > n - 5 || col > n - 5)
             return false;
@@ -62,6 +84,14 @@ public class Q2113 {
         return true;
     }
 
+    /**
+     * 左斜判断
+     * @param board
+     * @param n
+     * @param row
+     * @param col
+     * @return
+     */
     private boolean checkDiagonalLeft(List<String> board, int n, int row, int col) {
         if (row > n - 5 || col < 4)
             return false;
