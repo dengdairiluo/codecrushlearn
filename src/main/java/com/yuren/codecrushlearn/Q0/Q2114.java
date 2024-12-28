@@ -16,9 +16,12 @@ public class Q2114 {
         Map<Character, Integer> memo = new HashMap<>();
         int cnt = 0;
         for (int i = 0; i < 4; i++) {
+
+            // 统计相同位置相同颜色的次数
             if (solution.charAt(i) == guess.charAt(i)) {
                 cnt++;
             } else {
+                // 轧差
                 memo.put(solution.charAt(i), memo.getOrDefault(solution.charAt(i), 0) + 1);
                 memo.put(guess.charAt(i), memo.getOrDefault(guess.charAt(i), 0) - 1);
             }
