@@ -8,6 +8,14 @@ package com.yuren.codecrushlearn.Q2200;
  * @date 2025-01-05 00:47
  */
 public class Q2204 {
+
+    /**
+     * 八皇后降维版，贪心算法经典题目
+     * @param dogHouses
+     * @param n
+     * @param k
+     * @return
+     */
     boolean placeDogs(int[] dogHouses, int n, int k) {
         // 检查边界条件
         if (n == 0) return k == 0;
