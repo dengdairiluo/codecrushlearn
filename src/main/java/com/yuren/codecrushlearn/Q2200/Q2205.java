@@ -15,10 +15,14 @@ public class Q2205 {
         List<Integer> res = new ArrayList<>();
         int shorter = s;
         int longer = t;
+
+        // 过去长短板
         if (shorter > longer) {
             shorter = t;
             longer = s;
         }
+
+        // 全短，每次减一短加一长，直至全长
         for (int lNum = 0; lNum <= k; lNum++) {
             res.add(lNum * longer + (k - lNum) * shorter);
         }
