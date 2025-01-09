@@ -8,7 +8,13 @@ package com.yuren.codecrushlearn.Q2200;
  * @date 2025-01-08 23:54
  */
 public class Q2206 {
-    public int findMonotoneIncreasingNum(int n){
+
+    /**
+     * 单调递增数字最后一位减一，后面的都设置为9
+     * @param n
+     * @return
+     */
+    private static int findMonotoneIncreasingNum(int n){
         if (n <= 9) return n;
         char[] digits = String.valueOf(n).toCharArray();
         char maxDigit = '0';
@@ -28,5 +34,11 @@ public class Q2206 {
             }
         }
         return Integer.parseInt(new String(digits));
+    }
+
+    public static void main(String[] args) {
+        System.out.println(findMonotoneIncreasingNum(100000));
+        System.out.println(findMonotoneIncreasingNum(552));
+        System.out.println(findMonotoneIncreasingNum(652));
     }
 }
