@@ -19,14 +19,13 @@ public class Q2207 {
         int tIndex = n - 1;
         int qIndex = n - 1;
 
+        // 田忌队每次用最大的马，跟能赢齐的马比，赢最大的齐马
         while (tIndex >= 0 && qIndex >= 0) {
             if (t[tIndex] > q[qIndex]) {
                 winCount++;
                 tIndex--;
-                qIndex--;
-            } else {
-                qIndex--;
             }
+            qIndex--;
         }
 
         return winCount;
