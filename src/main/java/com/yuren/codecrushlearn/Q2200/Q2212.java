@@ -15,8 +15,10 @@ public class Q2212 {
         while (i < n && j >= 0) {
             if (matrix[i][j] == target) {
                 return true;
+              // 大于目标值，向左移动
             } else if (matrix[i][j] > target) {
                 j--;
+              // 小于目标值，向下移动
             } else {
                 i++;
             }
