@@ -11,6 +11,11 @@ import com.yuren.codecrushlearn.entities.ListNode;
  */
 public class Q2301 {
 
+    /**
+     * 快慢指针找中点
+     * @param head
+     * @return
+     */
     public ListNode middleNode(ListNode head) {
         ListNode slow = head;
         ListNode fast = head;
