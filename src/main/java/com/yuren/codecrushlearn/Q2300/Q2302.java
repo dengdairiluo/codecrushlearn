@@ -11,6 +11,13 @@ import com.yuren.codecrushlearn.entities.ListNode;
  */
 public class Q2302 {
 
+    /**
+     * 双指针找倒数第k个
+     * @param head
+     * @param k
+     * @return
+     */
+
     public ListNode findLastKth(ListNode head, int k) {
         ListNode f = head;
         ListNode b = head;
