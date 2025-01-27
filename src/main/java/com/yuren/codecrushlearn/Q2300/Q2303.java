@@ -11,10 +11,17 @@ import com.yuren.codecrushlearn.entities.ListNode;
  */
 public class Q2303 {
 
+    /**
+     * 快慢指针删除倒数第K个节点
+     * @param head
+     * @param k
+     * @return
+     */
     public ListNode removeLastKth(ListNode head, int k) {
         ListNode h = new ListNode(0,head);
         ListNode f = h;
         ListNode b = h;
+
         while(k-- > 0){
             f = f.next;
         }
