@@ -18,13 +18,19 @@ public class Q2304 {
         }
         ListNode f = head;
         ListNode b = head;
+
+        // 快指针快速到最后一个节点
         while (effectiveK-- > 0) {
             f = f.next;
         }
+
+        // 快慢指针一起走，直到快指针到最后一个节点
         while (f.next != null) {
             b = b.next;
             f = f.next;
         }
+
+        // 断开链表，形成新的链表
         ListNode newHead = b.next;
         b.next = null;
         f.next = head;
