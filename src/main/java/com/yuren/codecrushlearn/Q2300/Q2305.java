@@ -17,6 +17,7 @@ public class Q2305 {
         ListNode curr = head;
 
         while (curr != null) {
+            // 相邻节点值不同的话，加入链表
             if (curr.val != prev.val) {
                 prev.next = curr;
                 prev = curr;
