@@ -25,6 +25,12 @@ public class Q2308 {
         return newHead;
     }
 
+    /**
+     * 翻转链表，从start到end
+     * @param start
+     * @param end
+     * @return
+     */
     private ListNode reverse(ListNode start, ListNode end) {
         ListNode pre, cur, next;
         cur = start;
