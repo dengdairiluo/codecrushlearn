@@ -4,19 +4,19 @@ import com.yuren.codecrushlearn.entities.ListNode;
 
 /**
  * Created with Intellij IDEA.
- * Description:
+ * Description: 回文链表
  *
  * @author Sleepy Code Tom
  * @date 2025-02-04 23:20
  */
 public class Q2309 {
-    public boolean palindrome(ListNode head){
+    public boolean palindrome(ListNode head) {
         // 找到中间节点（偶数节点则是靠前的节点）
         ListNode middle = findMiddle(head);
         ListNode tailPart = reverse(middle.next);
         middle.next = null;
-        while (tailPart!=null){
-            if (head.val != tailPart.val){
+        while (tailPart != null) {
+            if (head.val != tailPart.val) {
                 return false;
             }
             head = head.next;
@@ -25,6 +25,12 @@ public class Q2309 {
         return true;
     }
 
+    /**
+     * 快慢指针找中点
+     *
+     * @param head
+     * @return
+     */
     private ListNode findMiddle(ListNode head) {
         ListNode slow = head;
         // 这样设置fast，在偶数场景下找出的middle 是中间靠前的节点， 奇数场景恰好是中间节点，方便后续的reverse操作
@@ -36,7 +42,13 @@ public class Q2309 {
         return slow;
     }
 
-    private ListNode reverse(ListNode head){
+    /**
+     * 反转链表
+     *
+     * @param head
+     * @return
+     */
+    private ListNode reverse(ListNode head) {
         ListNode prev = null;
         ListNode curr = head;
         while (curr != null) {
