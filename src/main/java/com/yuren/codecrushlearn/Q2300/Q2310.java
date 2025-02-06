@@ -13,6 +13,8 @@ public class Q2310 {
     public ListNode merge(ListNode l1, ListNode l2) {
         ListNode virtualHead = new ListNode();//虚拟头节点
         ListNode tail = virtualHead;
+
+        // 两个链表都不为空时，取较小的节点
         while (l1 != null && l2 != null) {
             //把较小的节点拼接到尾部
             if (l1.val < l2.val) {
