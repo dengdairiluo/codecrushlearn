@@ -13,25 +13,39 @@ import java.util.List;
  * @date 2025-02-08 06:38
  */
 public class Q2311 {
-    public ListNode mergeKLists(List<ListNode> klists, int k){
+    public ListNode mergeKLists(List<ListNode> klists, int k) {
         // 使用归并的方式
-        return mergeKLists(klists, 0,k-1);
+        return mergeKLists(klists, 0, k - 1);
     }
 
-    private ListNode mergeKLists(List<ListNode> klists, int left, int right){
-        if(left == right){
+    /**
+     * 归并合并链表
+     *
+     * @param klists
+     * @param left
+     * @param right
+     * @return
+     */
+    private ListNode mergeKLists(List<ListNode> klists, int left, int right) {
+        if (left == right) {
             return klists.get(left);
         }
         //找出中间位置
-        int mid = (left + right)/2;
+        int mid = (left + right) / 2;
         //归并合并左边
         ListNode l1 = mergeKLists(klists, left, mid);
         //归并合并右边
         ListNode l2 = mergeKLists(klists, mid + 1, right);
         //合并最后两个
-        return mergeTwoLists(l1,l2);
+        return mergeTwoLists(l1, l2);
     }
 
+    /**
+     * 合并两个链表
+     * @param l1
+     * @param l2
+     * @return
+     */
     private ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         //有一个为空，返回另一个
         if (l1 == null) return l2;
