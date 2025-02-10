@@ -13,6 +13,8 @@ public class Q2312 {
     public ListNode swap(ListNode head) {
         ListNode dummy = new ListNode(0, head);
         ListNode temp = dummy;
+
+        // 每次交换两个节点
         while (temp.next != null && temp.next.next != null) {
             // 需要交换位置的两个节点
             ListNode first = temp.next;
