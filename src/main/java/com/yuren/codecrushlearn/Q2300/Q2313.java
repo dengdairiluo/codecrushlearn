@@ -20,6 +20,11 @@ public class Q2313 {
         return jointMerge(head, tailPart);
     }
 
+    /**
+     * 找到链表的中间节点
+     * @param head
+     * @return
+     */
     private ListNode findMiddle(ListNode head) {
         ListNode slow = head;
         ListNode fast = head;
@@ -30,6 +35,11 @@ public class Q2313 {
         return slow;
     }
 
+    /**
+     * 反转链表
+     * @param head
+     * @return
+     */
     private ListNode reverse(ListNode head) {
         ListNode prev = null;
         ListNode curr = head;
@@ -42,6 +52,12 @@ public class Q2313 {
         return prev;
     }
 
+    /**
+     * 交替合并两个链表
+     * @param head1
+     * @param head2
+     * @return
+     */
     private ListNode jointMerge(ListNode head1, ListNode head2) {
         ListNode dummy = new ListNode(0, head1);
         ListNode p1 = head1, p2 = head2;
