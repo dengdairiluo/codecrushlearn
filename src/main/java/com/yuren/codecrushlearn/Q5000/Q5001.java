@@ -12,6 +12,7 @@ public class Q5001 {
         char[] str = s.toCharArray();
         int n = str.length;
         k = k % n;
+        // 右移k位
         for (int i = 0; i < k; ++i) {
             char tmp = str[n-1];
             for (int j = n-1; j > 0; --j) {
