@@ -18,6 +18,12 @@ public class Q5003 {
         this.n = 0;
     }
 
+    /**
+     *  在数组中插入一个元素,可扩容
+     * @param index
+     * @param value
+     * @return
+     */
     public boolean insert(int index, int value) {
         if (index > n || index < 0) return false;
         if (capacity == n) {
