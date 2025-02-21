@@ -12,8 +12,7 @@ import com.yuren.codecrushlearn.entities.ListNode;
 public class Q5031 {
 
     public ListNode insertAtHead(ListNode head, int value) {
-        ListNode node = new ListNode(value, head);
-        return node;
+        return new ListNode(value, head);
     }
 
     public ListNode insertAtTail(ListNode head, int value) {
