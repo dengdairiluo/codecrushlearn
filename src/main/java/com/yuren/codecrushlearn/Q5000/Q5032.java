@@ -19,6 +19,7 @@ public class Q5032 {
             return new ListNode(value, head);
         }
         ListNode p = head;
+        // 比value小的节点,就跳过
         while (p.next != null && p.val < value && p.next.val < value) {
             p = p.next;
         }
