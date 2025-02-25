@@ -17,6 +17,7 @@ public class Q5033 {
         ListNode p = head;
         while (p != null) {
             ListNode tmp = p.next;
+            // 找到不等于val的节点，加入到新链表中
             if (p.val != val) {
                 p.next = null;
                 tail.next = p;
