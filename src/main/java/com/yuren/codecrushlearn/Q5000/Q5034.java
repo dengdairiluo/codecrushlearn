@@ -5,7 +5,7 @@ import com.yuren.codecrushlearn.entities.ListNode;
 /**
  * Created with Intellij IDEA.
  * Description:
- *
+ * 单链表实现
  * @author Sleepy Code Tom
  * @date 2025-02-27 00:39
  */
