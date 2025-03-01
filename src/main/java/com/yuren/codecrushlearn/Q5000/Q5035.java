@@ -39,9 +39,11 @@ public class Q5035 {
         //约瑟夫环出圈
         int i = 0;
         int count = 1;
+        // 头尾相连
         ListNode prev = tail;
         ListNode p = head;
         while (prev != p) {
+            // 报数出局
             if (count == m) {
                 res[i] = p.val;
                 prev.next = p.next;
