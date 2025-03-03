@@ -3,7 +3,7 @@ package com.yuren.codecrushlearn.Q5000;
 /**
  * Created with Intellij IDEA.
  * Description:
- *
+ * 顺序栈
  * @author Sleepy Code Tom
  * @date 2025-03-03 01:26
  */
