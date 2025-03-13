@@ -5,7 +5,7 @@ import com.yuren.codecrushlearn.entities.ListNode;
 /**
  * Created with Intellij IDEA.
  * Description:
- *
+ * 链式队列
  * @author Sleepy Code Tom
  * @date 2025-03-13 01:12
  */
