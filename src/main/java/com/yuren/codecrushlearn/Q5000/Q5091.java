@@ -6,10 +6,11 @@ import com.yuren.codecrushlearn.entities.ListNode;
  * Created with Intellij IDEA.
  * Description:
  * 链式队列
+ *
  * @author Sleepy Code Tom
  * @date 2025-03-13 01:12
  */
-public class Q5066 {
+public class Q5091 {
     private ListNode head = null;
     private ListNode tail = null;
 
