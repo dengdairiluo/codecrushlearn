@@ -3,7 +3,7 @@ package com.yuren.codecrushlearn.Q5000;
 /**
  * Created with Intellij IDEA.
  * Description:
- *
+ * 只用一个数组来实现三个 循环队列
  * @author Sleepy Code Tom
  * @date 2025-03-16 23:59
  */
