@@ -71,11 +71,17 @@ public class Q5094 {
         }
     }
 
-    private AnimalQueue dogQueue = new AnimalQueue();
-    private AnimalQueue catQueue = new AnimalQueue();
+    /**
+     * 狗队列
+     */
+    private final AnimalQueue dogQueue = new AnimalQueue();
+    /**
+     * 猫队列
+     */
+    private final AnimalQueue catQueue = new AnimalQueue();
     private int seq = 0;
     private int animalNum = 0;
-    private int shelfSize;
+    private final int shelfSize;
 
     public Q5094(int shelfSize) {
         this.shelfSize = shelfSize;
@@ -97,6 +103,11 @@ public class Q5094 {
         return true;
     }
 
+
+    /**
+     * 任意出队列
+     * @return
+     */
     public int dequeueAny() {
         if (this.animalNum == 0) return -1;
 
