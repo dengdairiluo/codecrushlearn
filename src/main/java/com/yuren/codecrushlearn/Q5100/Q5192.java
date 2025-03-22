@@ -12,6 +12,7 @@ public class Q5192 {
     private int[] mem;
 
     public int fibonacci(int n) {
+        // 记忆化求斐波那契数列
         mem = new int[n+1];
         return fibonacci_recur(n);
     }
