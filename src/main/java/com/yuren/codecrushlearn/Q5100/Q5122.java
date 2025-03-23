@@ -3,7 +3,7 @@ package com.yuren.codecrushlearn.Q5100;
 /**
  * Created with Intellij IDEA.
  * Description:
- *
+ * 递归算阶乘
  * @author Sleepy Code Tom
  * @date 2025-03-23 23:33
  */
