@@ -7,7 +7,7 @@ package com.yuren.codecrushlearn.Q5100;
  * @author Sleepy Code Tom
  * @date 2025-03-20 23:29
  */
-public class Q5192 {
+public class Q5121 {
 
     private int[] mem;
 
